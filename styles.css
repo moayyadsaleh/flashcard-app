@@ -22,7 +22,7 @@ h1 {
 
 p {
   font-size: 18px;
-  color: #555;
+  color: whitesmoke;
   line-height: 1.5;
 }
 
@@ -46,13 +46,14 @@ button:hover {
 /* Add the following styles for flashcards */
 
 .flashcard {
-  background-color: #ecf0f1; /* Different color for the flashcards */
+  background-color: #ecf0f1;
   padding: 20px;
   margin-bottom: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: left;
   transition: transform 0.2s ease-in-out;
+  color: black; /* Set the default text color for flashcards */
 }
 
 .flashcard:hover {
@@ -62,20 +63,20 @@ button:hover {
 .flashcard strong {
   display: block;
   font-size: 28px; /* Adjust the font size for the word */
-  color: #333;
+  color: black; /* Set the text color for the word */
 }
 
 .flashcard p {
   margin: 10px 0;
   font-size: 22px; /* Adjust the font size for the meaning */
-  color: black;
+  color: black; /* Set the text color for the meaning */
 }
 
 .flashcard img {
   max-width: 100%;
   height: auto;
   border-radius: 8px;
-  margin-top: 15px; /* Adjust the margin for better spacing */
+  margin-top: 15px;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -97,4 +98,22 @@ button:hover {
 
 .flashcard button:hover {
   background-color: #c0392b;
+}
+.flashcard button:hover {
+  transform: scale(1.1);
+}
+.flashcard strong,
+.flashcard p {
+  transition: color 0.3s ease;
+}
+.flashcard button {
+  margin-bottom: 5px;
+}
+@media screen and (max-width: 600px) {
+  .flashcard {
+    font-size: 18px;
+  }
+}
+.flashcard:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
