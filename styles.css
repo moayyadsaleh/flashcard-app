@@ -43,8 +43,6 @@ button:hover {
   background-color: #2980b9;
 }
 
-/* Add the following styles for flashcards */
-
 .flashcard {
   background-color: #ecf0f1;
   padding: 20px;
@@ -53,7 +51,7 @@ button:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: left;
   transition: transform 0.2s ease-in-out;
-  color: black; /* Set the default text color for flashcards */
+  color: black;
 }
 
 .flashcard:hover {
@@ -62,18 +60,18 @@ button:hover {
 
 .flashcard strong {
   display: block;
-  font-size: 28px; /* Adjust the font size for the word */
-  color: black; /* Set the text color for the word */
+  font-size: 28px;
+  color: black;
 }
 
 .flashcard p {
   margin: 10px 0;
-  font-size: 22px; /* Adjust the font size for the meaning */
-  color: black; /* Set the text color for the meaning */
+  font-size: 22px;
+  color: black;
 }
 
 .flashcard img {
-  max-width: 100%;
+  max-width: 150%;
   height: auto;
   border-radius: 8px;
   margin-top: 15px;
@@ -116,4 +114,46 @@ button:hover {
 }
 .flashcard:hover {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+.footer {
+  text-align: center;
+  background-color: black;
+  color: white;
+  padding: 5px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer a {
+  color: #3498db; /* Change the color of the link */
+  text-decoration: none; /* Remove the underline from the link */
+}
+
+.footer a:hover {
+  color: #2980b9; /* Change the color on hover */
+}
+input {
+  padding: 10px;
+  margin: 8px 0;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
 }

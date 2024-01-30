@@ -1,19 +1,35 @@
 document.addEventListener("DOMContentLoaded", function () {
   const createCardBtn = document.getElementById("createCardBtn");
   const flashcardContainer = document.getElementById("flashcardContainer");
+  const flashcardForm = document.getElementById("flashcardForm");
 
   // Load existing flashcards from localStorage
   loadFlashcards();
 
   createCardBtn.addEventListener("click", function () {
-    const word = prompt("Enter the word:");
-    const meaning = prompt("Enter the meaning:");
-    const imageUrl = prompt("Enter the image URL:");
+    // flashcardForm.style.display = "block"; // Remove this line
+  });
+
+  flashcardForm.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    const wordInput = document.getElementById("word");
+    const meaningInput = document.getElementById("meaning");
+    const imageUrlInput = document.getElementById("imageUrl");
+
+    const word = wordInput.value;
+    const meaning = meaningInput.value;
+    const imageUrl = imageUrlInput.value;
 
     if (word && meaning) {
       createFlashcard(word, meaning, imageUrl);
       // Save the flashcards to localStorage
       saveFlashcards();
+
+      // Reset input values
+      wordInput.value = "";
+      meaningInput.value = "";
+      imageUrlInput.value = "";
     } else {
       alert("Please enter both word and meaning.");
     }
