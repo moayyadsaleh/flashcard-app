@@ -71,11 +71,9 @@ button:hover {
 }
 
 .flashcard img {
-  max-width: 150%;
-  height: auto;
-  border-radius: 8px;
-  margin-top: 15px;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  width: 100%; /* Make the image take up 100% of its container's width */
+  height: auto; /* Allow the height to adjust proportionally */
+  max-width: 100%; /* Ensure the image doesn't exceed its original size */
 }
 
 .flashcard button {
@@ -155,5 +153,35 @@ button {
 }
 
 button:hover {
+  background-color: #0056b3;
+}
+.form-label {
+  display: block;
+  margin-bottom: 8px;
+  color: white; /* Adjust the color as needed */
+}
+
+.form-input {
+  padding: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form-button {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.form-button:hover {
   background-color: #0056b3;
 }

@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
     <title>Flashcard App</title>
-    <style></style>
   </head>
   <body>
     <div class="container">
@@ -17,34 +16,46 @@
         and paste the URL into the specified box when adding your flashcard.
       </p>
       <p>
-        To get started, fill out the form below and click the "Create Flashcard"
-        button. Your flashcards will be saved, allowing you to review them
-        anytime.
+        To get started, click the "Create Flashcard" button below, enter the
+        word, meaning, and an optional image URL. Your flashcards will be saved,
+        allowing you to review them anytime.
       </p>
-      <!-- Update your existing form with the following changes -->
-      <form id="flashcardForm">
-        <label for="word">Word:</label>
-        <input type="text" id="word" placeholder="Enter the word" required />
 
-        <label for="meaning">Meaning:</label>
+      <form id="flashcardForm" class="flashcard-form">
+        <label for="word" class="form-label">Word:</label>
+        <input
+          type="text"
+          id="word"
+          class="form-input"
+          placeholder="Enter the word"
+          required
+        />
+
+        <label for="meaning" class="form-label">Meaning:</label>
         <input
           type="text"
           id="meaning"
+          class="form-input"
           placeholder="Enter the meaning"
           required
         />
 
-        <label for="imageUrl">Image URL:</label>
+        <label for="imageUrl" class="form-label">Image URL:</label>
         <input
           type="text"
           id="imageUrl"
+          class="form-input"
           placeholder="Paste the image URL here"
         />
 
-        <button type="submit" id="createCardBtn">Create Flashcard</button>
+        <button type="submit" id="createCardBtn" class="form-button">
+          Create Flashcard
+        </button>
       </form>
+
       <div id="flashcardContainer"></div>
     </div>
+
     <footer class="footer">
       <p style="color: black">
         Created by
@@ -55,6 +66,7 @@
         >
       </p>
     </footer>
+
     <script src="index.js"></script>
   </body>
 </html>
